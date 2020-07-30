@@ -42,8 +42,7 @@ public class UserServiceImpl implements UserService {
         //  Setting ADMIN as bydefault ROLE TYPE for every new user created.
         roles.add(new Role(RoleType.ADMIN.name()));
         user.setRoles(roles);
-
-        user.setRoles(new HashSet<>(roleRepository.findAll()));
+        
 
         userRepository.save(user);
 
